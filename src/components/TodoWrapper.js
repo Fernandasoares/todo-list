@@ -33,6 +33,38 @@ export const TodoWrapper = ({ handleFilterChange, filter }) => {
   return (
     <div className='TodoWrapper'>
       <h1>To-Do List!</h1>
+      <div className="filters">
+        <h4>Filtro:</h4>
+        <div className="filter-options">
+          <label>
+            <input
+              type="radio"
+              value="all"
+              checked={filter === 'all'}
+              onChange={() => handleFilterChange('all')}
+            />
+            Todos
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="completed"
+              checked={filter === 'completed'}
+              onChange={() => handleFilterChange('completed')}
+            />
+            Concluídos
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="incomplete"
+              checked={filter === 'incomplete'}
+              onChange={() => handleFilterChange('incomplete')}
+            />
+            Não Concluídos
+          </label>
+        </div>
+      </div>
       <TodoForm addTodo={addTodo} />
       {todos.filter((todo) => {
           if (filter === 'completed') {

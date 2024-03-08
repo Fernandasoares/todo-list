@@ -163,6 +163,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+
 }
 
 .filter-options input[type="radio"]:checked::after {
@@ -181,7 +182,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .TodoWrapper {
     margin-left: 1rem; 
     margin-right: 1rem;
@@ -189,7 +190,9 @@ h4 {
 }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (min-width: 380px) {
+  
+  
   .todo-input {
     width: 60%; 
     max-width: 250px; 
@@ -197,7 +200,8 @@ h4 {
 
   .TodoWrapper {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: none;
+    height: 100%;
   }
   
 }

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquare, faCheckSquare, faPen, faTrash, } from '@fortawesome/free-solid-svg-icons';
 
 
-export const Todo = ({task, toggleComplete, deleteTodo, editTodo, handleFilterChange}) => {
+export const Todo = ({task, toggleComplete, deleteTodo, editTodo}) => {
   const MAX_CHARACTERS = 30;
   const formatText = text => {
     if (text.length > MAX_CHARACTERS) {

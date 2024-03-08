@@ -29,21 +29,26 @@ h1 {
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .TodoForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
+  
 }
 
 .todo-input {
+  flex: 1;
   outline: none;
   background: none;
   border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 400px;
   color: #fff;
   font-size: 0.95rem;
 }
@@ -70,11 +75,17 @@ h1 {
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .Todo p {
   flex: 1; 
-  margin-right: 1rem; 
+  margin-right: 1rem;
+  word-wrap: break-word;
+  white-space: normal;
+  text-overflow: ellipsis; 
+  
 }
 
 .fa-trash {
@@ -117,11 +128,15 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1rem;
 }
 
 .filter-options label {
   color: #fff;
   margin-right: 0.5rem;
+  text-align: left;
+  display: flex; 
+  align-items: center; 
 }
 
 .filter-options input[type="radio"] {
@@ -156,4 +171,33 @@ h4 {
 
 .filter-options input[type="radio"]:checked {
   border-color: #521bdd;
+}
+
+@media only screen and (min-width: 1024px) {
+  
+
+  .TodoWrapper {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .TodoWrapper {
+    margin-left: 1rem; 
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+}
+
+@media only screen and (max-width: 380px) {
+  .todo-input {
+    width: 60%; 
+    max-width: 250px; 
+  }
+
+  .TodoWrapper {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
 }

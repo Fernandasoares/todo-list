@@ -18,7 +18,7 @@ export const TodoWrapper = ({ handleFilterChange, filter }) => {
   const [todos, setTodos] = useState(loadTodosFromLocalStorage());
 
   useEffect(() => {
-    saveTodosToLocalStorage(todos); // Salvar os todos no localStorage sempre que eles mudarem
+    saveTodosToLocalStorage(todos); 
   }, [todos]);
 
   const addTodo = todo => {
@@ -87,11 +87,11 @@ export const TodoWrapper = ({ handleFilterChange, filter }) => {
           } else {
             return true;
           }
-        }).map((todo, index) => (
+        }).map((todo) => (
         todo.isEditing ? (
           <EditTodoForm editTodo={editTask} task={todo} />
         ) : (
-          <Todo task={todo} key={index}
+          <Todo task={todo} key={todo.id}
           toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo}/>
         )
         

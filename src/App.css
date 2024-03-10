@@ -12,10 +12,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  padding: 1rem;
 }
 
 .App {
   text-align: center;
+  max-width: 100%;
 }
 
 h1 {
@@ -26,21 +29,19 @@ h1 {
 
 .TodoWrapper {
   background: #1A1A40;
-  margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 700px;
+  margin: 50px auto 0;
+  padding-bottom: 100px;
 }
 
 .TodoForm {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 1rem 0 1rem 0;
-  
+  margin: 1rem 0;
 }
 
 .todo-input {
@@ -51,6 +52,9 @@ h1 {
   padding: 0.5rem 1rem;
   color: #fff;
   font-size: 0.95rem;
+  width: 100%;
+  max-width: 400px;
+  
 }
 
 .todo-input::placeholder {
@@ -61,13 +65,14 @@ h1 {
   background: #8758ff;
   color: #fff;
   border: none;
-  padding: 0.55rem;
+  padding: 0.55rem 1rem;
   cursor: pointer;
   font-size: 0.95rem;
 }
 
 .Todo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: #8758ff;
@@ -75,7 +80,6 @@ h1 {
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
-  max-width: 100%;
   overflow: hidden;
 }
 
@@ -113,10 +117,10 @@ h1 {
 }
  
 .filters {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 h4 {
@@ -128,15 +132,15 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1rem;
+  flex-wrap: wrap;
 }
 
 .filter-options label {
   color: #fff;
   margin-right: 0.5rem;
-  text-align: left;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .filter-options input[type="radio"] {
@@ -163,7 +167,6 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-
 }
 
 .filter-options input[type="radio"]:checked::after {
@@ -175,8 +178,6 @@ h4 {
 }
 
 @media only screen and (min-width: 1024px) {
-  
-
   .TodoWrapper {
     margin-bottom: 5rem;
   }
@@ -184,24 +185,35 @@ h4 {
 
 @media only screen and (min-width: 768px) {
   .TodoWrapper {
-    margin-left: 1rem; 
+    margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
-}
+  }
 }
 
-@media only screen and (min-width: 380px) {
-  
-  
+@media only screen and (min-width: 320px) {
   .todo-input {
-    width: 60%; 
-    max-width: 250px; 
+    width: 60%;
+    max-width: 250px;
   }
 
   .TodoWrapper {
     margin-top: 2rem;
-    padding: none;
+    padding: 2rem;
     height: 100%;
+    font-size: 0.85rem;
   }
-  
+
+  .filters {
+    margin-top: 1rem; 
+    flex-direction: center;
+  }
+
+  .filter-options {
+    margin-top: 0.5rem;
+  }
+
+  .filter-options label {
+    margin-right: 0.5rem; 
+  }
 }

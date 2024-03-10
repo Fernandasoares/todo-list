@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# To-Do List App 📝✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de uma aplicação web para uma lista de tarefas (to-do list) desenvolvida em React.js.
 
-## Available Scripts
+![Imagem do mockup do projeto](./images/mockup-todo-list.png)
 
-In the project directory, you can run:
+## Desafio:
 
-### `npm start`
+O desafio consistiu em criar uma aplicação web simples que permitisse aos usuários adicionar, marcar como concluídas e excluir tarefas de uma lista. O objetivo era desenvolver uma interface intuitiva e responsiva usando React.js.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## O que foi implementado:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Desenvolvi uma interface simples e intuitiva para a aplicação.
+- Implementei um campo de entrada onde os usuários podem digitar o nome de uma nova tarefa.
+- Adicionei um botão para adicionar novas tarefas à lista.
+- Cada item na lista de tarefas possui uma opção para marcar a tarefa como concluída.
+- Implementei uma funcionalidade para excluir tarefas da lista.
+- Garanti que a aplicação fosse responsiva e funcionasse bem em dispositivos móveis.
+- Cada vez que uma nova tarefa é adicionada, ela aparece em primeiro na lista.
+- Cada vez que uma tarefa é marcada como concluída, ela vai para o fim da lista.
+- Implementei a validação para que o usuário não possa adicionar uma tarefa vazia.
 
-### `npm test`
+## Dificuldades encontradas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Durante o desenvolvimento deste projeto, enfrentei algumas dificuldades:
 
-### `npm run build`
+1. **Implantação do design para o CSS**: Encontrei dificuldades em traduzir o design esperado para o CSS, especialmente em relação à estilização de componentes e layouts complexos.
+2. **Responsividade do To-Do List**: Tive dificuldades em tornar a aplicação responsiva, garantindo que ela se adaptasse adequadamente a diferentes tamanhos de tela e dispositivos móveis.
+3. **Implementação de funcionalidades avançadas**: Encontrei desafios ao tentar adicionar funcionalidades avançadas, como edição de tarefas e filtros de exibição. Essas funcionalidades exigiram um maior entendimento e domínio de conceitos avançados do React.js.
+4. **Gerenciamento de estado**: No início do desenvolvimento, enfrentei problemas ao lidar com o gerenciamento de estado da aplicação, especialmente ao lidar com a adição e exclusão dinâmica de tarefas. Foi necessário aprender e aplicar técnicas eficazes de gerenciamento de estado para resolver esses problemas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Próximos Passos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Apesar das dificuldades encontradas, estou satisfeito com o resultado geral deste projeto. Para melhorar ainda mais a aplicação, pretendo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Aprofundar meu conhecimento em técnicas de CSS e responsividade para melhorar a experiência do usuário em dispositivos móveis.
+- Explorar bibliotecas ou frameworks de CSS, como Bootstrap ou Material-UI, para facilitar o desenvolvimento de interfaces responsivas e estilizadas.
+- Continuar estudando e praticando o React.js para melhorar minhas habilidades de implementação de funcionalidades avançadas e gerenciamento de estado.
 
-### `npm run eject`
+## Imagens do Projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![To-Do List](./images/todo-list.png)
+![To-Do List - Edição](./images/todo-list-editar.png)
+![To-Do List - Filtro (Concluídas)](./images/todo-list-concluidas.png)
+![To-Do List - Filtro (Não Concluídas)](./images/todo-list-nao-concluidas.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto foi desenvolvido para estudo e aprendizado, onde pude aprimorar meus conhecimentos em React.js e colocar em prática o que aprendi. 🚀

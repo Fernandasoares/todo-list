@@ -3,7 +3,6 @@ import { TodoForm } from './TodoForm';
 import { v4 as uuidv4 } from 'uuid';
 import { Todo } from './Todo';
 import { EditTodoForm } from './EditTodoForm';
-uuidv4();
 
 const loadTodosFromLocalStorage = () => {
   const todos = localStorage.getItem('todos');
@@ -21,16 +20,24 @@ export const TodoWrapper = ({ handleFilterChange, filter }) => {
     saveTodosToLocalStorage(todos);
   }, [todos]);
 
+  useEffect(() => {
+    if (todos.length > 5) {
+      document.body.style.alignItems = 'flex-start';
+    } else {
+      document.body.style.alignItems = 'center';
+    }
+  }, [todos]);
+
   const addTodo = (todo) => {
     if (todo.trim() !== '') {
       setTodos([
-        { id: uuidv4(), task: todo, completed: false, isEditing: false },
         ...todos,
+        { id: uuidv4(), task: todo, completed: false, isEditing: false },
       ]);
     } else {
       console.log('Tarefa vazia!');
     }
-  };  
+  };
 
   const toggleComplete = (id) => {
     setTodos(
@@ -62,7 +69,7 @@ export const TodoWrapper = ({ handleFilterChange, filter }) => {
     } else {
       console.log('Tarefa vazia!');
     }
-  };  
+  };
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === 'completed') {
